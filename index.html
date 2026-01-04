@@ -1,28 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dawson Marcade | Resume + Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
 <body>
-  <div class="container">
-    <h1>Dawson Marcade</h1>
-    <p class="subtitle">Data & Supply Chain Analytics Consultant</p>
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top">Dawson Marcade</a>
 
-    <h2>Resume</h2>
-    <a class="button" href="Resume - Dawson Marcade.pdf" target="_blank">Download Resume</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#resume">Resume</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Procurement Spend Analytics</h3>
+      <div class="nav__actions">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Dawson Marcade</h1>
+      <p class="subtitle">Data-driven Supply Chain & Analytics Consultant</p>
+
+      <div class="hero__cta">
+        <a class="button" href="resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+        <a class="button button--secondary" href="#projects">View Projects</a>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="section">
+      <h2>Resume</h2>
       <p>
-        Built SQL + Python pipelines analyzing 3,000+ SKUs and $50M+ in spend.
-        Delivered $12.5M in identified savings.
+        Quick access to my latest resume:
+        <a href="resume.pdf" target="_blank" rel="noreferrer">resume.pdf</a>
       </p>
-      <a href="#">GitHub</a>
-      <a href="#">Write-up</a>
-    </div>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Email: dawsonmarcade@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/dawsonmarcade</p>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
 
-    <div class="footer">
-      © 2026 Dawson Marcade
-    </div>
-  </div>
+      <div class="badge-row">
+        <span class="badge">SQL</span>
+        <span class="badge">Python</span>
+        <span class="badge">Power BI</span>
+        <span class="badge">Excel / Power Query</span>
+        <span class="badge">Databricks</span>
+        <span class="badge">Azure Data Factory</span>
+        <span class="badge">Snowflake</span>
+        <span class="badge">ETL / ELT</span>
+        <span class="badge">Procurement Analytics</span>
+        <span class="badge">Stakeholder Management</span>
+      </div>
+
+      <p class="muted" style="margin-top:14px;">
+        Tip: match these badges to the keywords in the roles you’re applying for.
+      </p>
+    </section>
+
+    <!-- Projects + Filtering -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Projects</h2>
+
+        <div class="filters" aria-label="Project filters">
+          <button class="chip is-active" type="button" data-filter="all">All</button>
+          <button class="chip" type="button" data-filter="sql">SQL</button>
+          <button class="chip" type="button" data-filter="python">Python</button>
+          <button class="chip" type="button" data-filter="powerbi">Power BI</button>
+          <button class="chip" type="button" data-filter="etl">ETL</button>
+        </div>
+      </div>
+
+      <div class="grid" id="projectGrid">
+        <!-- Project Card 1 -->
+        <article class="card project" data-tags="sql python etl">
+          <div class="card__top">
+            <h3>Spend Analytics Pipeline</h3>
+            <div class="tag-row">
+              <span class="tag">SQL</span><span class="tag">Python</span><span class="tag">ETL</span>
+            </div>
+          </div>
+          <p>
+            Built a repeatable pipeline to clean, join, and analyze spend data across vendors and SKUs,
+            enabling faster category insights and savings identification.
+          </p>
+          <div class="card__links">
+            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="#" target="_blank" rel="noreferrer">Write-up</a>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="card project" data-tags="powerbi sql">
+          <div class="card__top">
+            <h3>Executive KPI Dashboard</h3>
+            <div class="tag-row">
+              <span class="tag">Power BI</span><span class="tag">SQL</span>
+            </div>
+          </div>
+          <p>
+            Developed a dashboard for sourcing performance and supplier KPIs with drill-down analysis,
+            improving alignment and decision speed.
+          </p>
+          <div class="card__links">
+            <a href="#" target="_blank" rel="noreferrer">Screenshots</a>
+            <a href="#" target="_blank" rel="noreferrer">Notes</a>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="card project" data-tags="python">
+          <div class="card__top">
+            <h3>Forecasting + Scenario Tool</h3>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+            </div>
+          </div>
+          <p>
+            Created a lightweight forecasting and scenario model to test demand/supply assumptions and
+            quantify cost impact under constraints.
+          </p>
+          <div class="card__links">
+            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="#" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@email.com">you@email.com</a></p>
+      <p>LinkedIn: <a href="#" target="_blank" rel="noreferrer">linkedin.com/in/yourname</a></p>
+
+      <footer class="footer">© 2026 Dawson Marcade</footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
+</html>
